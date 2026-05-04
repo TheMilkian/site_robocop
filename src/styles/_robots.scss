@@ -1,0 +1,63 @@
+@use 'variaveis';
+
+.robots {
+    padding: 5.6vw;
+    margin-bottom: 20px;
+
+    &__list {
+        display: flex;
+        flex-direction: column; 
+        gap: 8vw; 
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        align-items: center; 
+        gap: 4vw; 
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__text_container {
+        padding: 0 2vw;
+    }
+
+
+    h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            border: 2px solid;
+            border-color: variaveis.$corBorda;
+        }
+
+}
+
+@media (max-width: 768px) {
+    .robots {
+        padding: 8vw 4vw; 
+        &__item {
+            grid-template-columns: 1fr; 
+            gap: 20px; 
+            text-align: center; 
+        }
+
+        &__image {
+            max-width: 75%; 
+            margin: 0 auto; 
+            height: auto;
+            display: block;
+        }
+
+        &__content {
+            padding: 0; 
+        }
+
+    }
+}
+

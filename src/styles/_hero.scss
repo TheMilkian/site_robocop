@@ -1,0 +1,56 @@
+
+.hero {
+    padding: 5.6vw;
+    min-height: 40vh;
+    background-image: url(../../dist/images/robocop_1.jpg);
+    text-align: center;
+    background-size: cover;
+
+    @media (max-width: 768px) {
+        background-image: url(../images/robocop_1.jpg);
+        padding-top: calc(60vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+    }
+
+        .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        padding-top: 28vw;
+        
+        @media (max-width: 768px) {
+        padding-top: 1px;
+    }
+
+        &__branding {
+            margin: 0 auto 38px;
+            
+
+            @media (max-width: 768px) {
+                margin-left: 5vw;
+                    img {
+                    max-width: 100%;
+                    height: auto;
+                    margin-top: -380px; 
+}
+            }
+        }
+
+        .main-subtitle {
+            margin-bottom: 84px;
+
+            @media (max-width: 768px) {
+        padding-top: 1px;
+        font-size: 32px;
+    }
+            
+        }
+
+
+    }
+
+}

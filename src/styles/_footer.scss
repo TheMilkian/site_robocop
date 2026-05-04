@@ -1,0 +1,51 @@
+@use 'variaveis';
+
+.footer {
+    padding: 1vw 10vw;
+    text-align: center;
+    border: 2px solid;
+    border-color: variaveis.$corBorda;
+
+    p {
+        margin-left: 20px;
+    }
+
+
+            @media (max-width: 768px) {
+        margin-left: 4vw;
+        padding: 2vw 2vw;
+    }
+
+    p {
+        text-align: end;
+    }
+
+}
+
+
+
+.language-selector {
+    padding: 2px 2px;
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 18px;
+        width: 18px;
+    }
+
+    select {
+        background-color: transparent;
+        border: none;
+        color: variaveis.$corBorda;
+        height: 38px;
+
+        &:hover {
+            color: variaveis.$corTextoSecundario;
+        }
+
+        option {
+            color: variaveis.$corDeFundo;
+        }
+    }
+}

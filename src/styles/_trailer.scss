@@ -1,0 +1,24 @@
+@use 'variaveis';
+
+.trailer {
+    padding: 10vw 20vw;
+    min-height: 60vh;
+    text-align: center;
+    border: 2px solid;
+    border-color: variaveis.$corBorda;
+
+    @media (max-width: 768px) {
+        margin-left: 1vw;
+        padding: 2vw 2vw;
+
+        
+        min-height: 0; 
+
+        .trailer__video {
+                width: 300px;
+                height: 150px;
+    }
+            }
+        
+
+}

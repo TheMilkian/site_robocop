@@ -1,0 +1,120 @@
+@use 'variaveis';
+@use 'hero';
+@use 'sinopse';
+@use 'robots';
+@use 'trailer';
+@use 'footer';
+@use 'header';
+@use 'sass:color';
+
+
+
+@font-face {
+    font-family: DS-DIGIT;
+    src: url(../../assets/fonts/DS-DIGIT.TTF);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: rajdhani;
+    src: url(../../assets/fonts/rajdhani-medium.ttf);
+    font-weight: 600;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 6px;
+
+        @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: $fontSize + 4px;
+    }
+}
+
+.text {
+    @include text(26px);
+    font-family: "rajdhani", sans-serif;
+    color: variaveis.$corTextoSecundario;
+}
+
+.text-small {
+    @include text(12px);
+    font-family: "rajdhani", sans-serif;
+    color: variaveis.$corTextoSecundario;
+}
+
+.main-subtitle {
+    @include text(82px);
+    color: variaveis.$corTextoSubtitulo;
+    font-family: "DS-DIGIT", sans-serif;
+    
+}
+
+.title {
+    @include text(42px);
+    color: variaveis.$corTextoSubtitulo;
+    font-family: "DS-DIGIT", sans-serif;
+    
+}
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-family: "DS-DIGIT", sans-serif;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corDeFundoBotao;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 2px dashed variaveis.$corBorda;
+    
+
+    &:hover {
+            background-color: color.adjust(variaveis.$corDeFundoBotao, $lightness: 3%);
+        }
+
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotao;
+        border-color: variaveis.$corDeFundoBotao;
+
+        &:hover {
+            background-color: color.adjust(variaveis.$corDeFundoBotao, $lightness: 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
+
+    }
+
+
+    .sinopse {
+        margin-top: 40px;
+    }
+

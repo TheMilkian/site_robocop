@@ -1,0 +1,17 @@
+@use 'variaveis';
+
+.sinopse {
+    padding: 12vw;
+    min-height: 40vh;
+    background-image: url(../../dist/images/Delta_City.jpg);
+    text-align: center;
+    background-size: cover;
+    border: 2px solid;
+            border-color: variaveis.$corBorda;
+
+            @media (max-width: 768px) {
+        margin-left: 1vw;
+        padding: 2vw 2vw;
+    }
+
+}
